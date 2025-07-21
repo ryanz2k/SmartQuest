@@ -15,10 +15,23 @@ run/main_scene="uid://bvr4t0c3d1yjm"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
+
 [dotnet]
 
 project/assembly_name="SmartQuest"
 
+[editor]
+
+version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
