@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvr4t0c3d1yjm"]
+
+[ext_resource type="Script" uid="uid://cc8qkh6a5jd7e" path="res://login_screen.gd" id="1_mdri0"]
+
+[node name="Login Control Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mdri0")
+
+[node name="Email" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -27.0
+offset_right = 280.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="EmailLabel" type="Label" parent="Email"]
+layout_mode = 2
+text = "Email"
+
+[node name="EmailInput" type="LineEdit" parent="Email"]
+layout_mode = 2
+placeholder_text = "Enter Your Email"
+expand_to_text_length = true
+
+[node name="Password" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 54.35
+offset_right = 300.0
+offset_bottom = 112.35
+
+[node name="PasswordLabel" type="Label" parent="Password"]
+layout_mode = 2
+text = "Password"
+
+[node name="PasswordInput" type="LineEdit" parent="Password"]
+layout_mode = 2
+placeholder_text = "Enter Your Password"
+expand_to_text_length = true
+
+[node name="Login Button" type="Button" parent="."]
+layout_mode = 0
+offset_top = 125.0
+offset_right = 100.0
+offset_bottom = 160.0
+text = "Login"
+
+[node name="Register Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 125.0
+offset_right = 250.0
+offset_bottom = 160.0
+text = "Register"
+
+[connection signal="pressed" from="Login Button" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="Register Button" to="." method="_on_register_button_pressed"]
