@@ -1,41 +1,37 @@
 extends Control
 
-func _ready():
-	Firebase.Auth.login_succeeded.connect(on_login_succeeded)
-	Firebase.Auth.signup_succeeded.connect(on_register_succeeded)
-	Firebase.Auth.login_failed.connect(on_login_failed)
-	Firebase.Auth.signup_failed.connect(on_register_failed)
+func _ready() -> void:
+	# Connect authentication signals to generic handlers
+	_connect_auth_signals()
 
+func _connect_auth_signals() -> void:
+	Firebase.Auth.login_succeeded.connect(_on_auth_succeeded.bind("Login"))
+	Firebase.Auth.signup_succeeded.connect(_on_auth_succeeded.bind("Register"))
+	Firebase.Auth.login_failed.connect(_on_auth_failed.bind("Login"))
+	Firebase.Auth.signup_failed.connect(_on_auth_failed.bind("Register"))
 
 func _on_login_button_pressed() -> void:
-	var email = %EmailLineEdit.text
-	var password = %PasswordLineEdit.text
+	var email: String = %EmailLineEdit.text
+	var password: String = %PasswordLineEdit.text
 	Firebase.Auth.login_with_email_and_password(email, password)
 	%StateLabel.text = "Logging In"
 
 func _on_register_button_pressed() -> void:
-	var email = %EmailLineEdit.text
-	var password = %PasswordLineEdit.text
+	var email: String = %EmailLineEdit.text
+	var password: String = %PasswordLineEdit.text
 	Firebase.Auth.signup_with_email_and_password(email, password)
 	%StateLabel.text = "Registering"
 
-func on_login_succeeded(auth):
-	print(auth)
-	%StateLabel.text = "Login Success"
-	
-	
-func on_register_succeeded(auth):
-	print(auth)
-	%StateLabel.text = "Register Success"
-	
-func on_login_failed(error_code, message):
-	print(error_code)
-	print(message)
-	%StateLabel.text = "Login Failed: Error: %s" %message
-	
-	
-func on_register_failed(error_code, message):
-	print(error_code)
-	print(message)
-	%StateLabel.text = "Register Failed: Error: %s" %message
+# Generic handler for authentication success
+func _on_auth_succeeded(action: String) -> Callable:
+	return func(auth):
+		print(auth)
+		%StateLabel.text = "%s Success" % action
+
+# Generic handler for authentication failure
+func _on_auth_failed(action: String) -> Callable:
+	return func(error_code, message):
+		print(error_code)
+		print(message)
+		%StateLabel.text = "%s Failed: Error: %s" % [action, message]
 	
