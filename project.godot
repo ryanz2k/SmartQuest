@@ -21,6 +21,8 @@ Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
 
 [display]
 
+window/size/viewport_width=480
+window/size/viewport_height=854
 window/stretch/mode="viewport"
 
 [dotnet]
