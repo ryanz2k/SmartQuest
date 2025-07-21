@@ -1,2 +1,4 @@
 res://Authentication.tscn
 res://addons/godot-firebase/firebase/firebase.tscn
+res://Scenes/Authentication.tscn
+res://Scenes/Parents Dashboard.tscn

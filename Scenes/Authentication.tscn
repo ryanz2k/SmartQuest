@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://clbf8rwx21nj4"]
 
-[ext_resource type="Script" uid="uid://b1syq8tc8305c" path="res://Authentication.gd" id="1_g6fiq"]
+[ext_resource type="Script" uid="uid://b1syq8tc8305c" path="res://Authentication.gd" id="1_6ea5n"]
 
 [node name="Authentication" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_g6fiq")
+script = ExtResource("1_6ea5n")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
