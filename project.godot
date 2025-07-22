@@ -12,7 +12,11 @@ config_version=5
 
 config/name="SmartQuest"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 run/main_scene="uid://bvr4t0c3d1yjm"
+=======
+run/main_scene="uid://br7t0joh02e4o"
+>>>>>>> Stashed changes
 =======
 run/main_scene="uid://br7t0joh02e4o"
 >>>>>>> Stashed changes
