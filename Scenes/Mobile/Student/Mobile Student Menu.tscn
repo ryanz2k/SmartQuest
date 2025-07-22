@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3 uid="uid://dchdk4yeg17ph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u637x"]
+bg_color = Color(0.941176, 0.941176, 0.941176, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[node name="MobileStudentMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.811765, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Top MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/Top MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "[Avatar Profile]"
+horizontal_alignment = 1
+
+[node name="Full Name" type="Label" parent="VBoxContainer/Top MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "[Full Name Here]"
+horizontal_alignment = 1
+
+[node name="Username Email" type="Label" parent="VBoxContainer/Top MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "[Username/Email Here]"
+horizontal_alignment = 1
+
+[node name="Background Panel" type="Panel" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(480, 600)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_u637x")
+
+[node name="Content MarginContainer" type="MarginContainer" parent="VBoxContainer/Background Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Profile"
+
+[node name="Button2" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Achievements"
+
+[node name="Button3" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="Button4" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "About"
+
+[node name="Button5" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Terms and Agreement"
+
+[node name="Button6" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Logout"

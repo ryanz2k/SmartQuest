@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://1wtidi71e6yj"]
+[gd_scene load_steps=7 format=3 uid="uid://1wtidi71e6yj"]
 
 [ext_resource type="Texture2D" uid="uid://w0gp2rxx5yfk" path="res://Assets/Buttons/Notification.png" id="1_7i3pb"]
 
@@ -7,11 +7,15 @@ bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7i3pb"]
-bg_color = Color(0.941176, 0.941176, 0.941176, 0)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m0pt"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.34902)
+shadow_size = 4
+shadow_offset = Vector2(0, 1.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qn1b"]
 bg_color = Color(1, 1, 1, 1)
@@ -19,12 +23,19 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0.223529)
-shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.34902)
+shadow_size = 2
 shadow_offset = Vector2(0, 1.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ydms"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.34902)
+shadow_size = 4
+shadow_offset = Vector2(0, 1.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyy5r"]
 content_margin_left = 10.0
@@ -65,7 +76,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Top VBoxContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="Top MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -74,148 +85,126 @@ theme_override_constants/margin_top = 60
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Top VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Top MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 30
 
-[node name="Label" type="Label" parent="VBoxContainer/Top VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Top MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "[Avatar Profile]"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Top VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Top MarginContainer/HBoxContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="User Full Name" type="Label" parent="VBoxContainer/Top VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="User Full Name" type="Label" parent="VBoxContainer/Top MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "[Full Name]"
 
-[node name="Label2" type="Label" parent="VBoxContainer/Top VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/Top MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "[Role]"
 
-[node name="Button" type="Button" parent="VBoxContainer/Top VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer/Top MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_icons/icon = ExtResource("1_7i3pb")
 flat = true
 
-[node name="Panel Background" type="Panel" parent="VBoxContainer"]
+[node name="Background Panel" type="Panel" parent="VBoxContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(480, 600)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_rf6t5")
 
-[node name="Contents MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel Background"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -240.0
-offset_right = 240.0
-offset_bottom = 706.0
-grow_horizontal = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 30
-
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer"]
+[node name="Content MarginContainer" type="MarginContainer" parent="VBoxContainer/Background Panel"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_7i3pb")
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 450.0
+offset_bottom = 726.0
 
-[node name="Content Container" type="MarginContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer"]
-layout_mode = 2
-
-[node name="VBox Container Holder" type="VBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="Performance Container" type="VBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder"]
+[node name="Performance VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Performance Container"]
+[node name="Label" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Performance VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Performance Statistics"
 
-[node name="Performance Panel" type="PanelContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Performance Container"]
+[node name="Performance PanelContainer" type="PanelContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Performance VBoxContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0m0pt")
 
-[node name="Panel" type="Panel" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Performance Container/Performance Panel"]
+[node name="Panel" type="Panel" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Performance VBoxContainer/Performance PanelContainer"]
 custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8qn1b")
 
-[node name="Achievements Container" type="VBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder"]
+[node name="Achievements VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container"]
+[node name="Label" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Recent Achivements"
 
-[node name="Achivements Panel" type="PanelContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container"]
+[node name="Achivements PanelContainer" type="PanelContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8ydms")
 
-[node name="Panel" type="Panel" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel"]
-custom_minimum_size = Vector2(420, 200)
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8qn1b")
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 15
 
-[node name="Achivement Container" type="PanelContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel/MarginContainer/VBoxContainer"]
+[node name="Achivement PanelContainer" type="PanelContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xyy5r")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel/MarginContainer/VBoxContainer/Achivement Container"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer"]
 clip_contents = true
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Achievement Icon" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel/MarginContainer/VBoxContainer/Achivement Container/HBoxContainer"]
+[node name="Achievement Icon" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.730529, 0.491456, 1)
 theme_override_font_sizes/font_size = 10
 text = "[Icon]"
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel/MarginContainer/VBoxContainer/Achivement Container/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer/HBoxContainer"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
-[node name="Achievement Name" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel/MarginContainer/VBoxContainer/Achivement Container/HBoxContainer/VBoxContainer"]
+[node name="Achievement Name" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
 text = "[Achievement Name]"
 
-[node name="Acquired Date" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel/MarginContainer/VBoxContainer/Achivement Container/HBoxContainer/VBoxContainer"]
+[node name="Acquired Date" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.592157, 0.592157, 0.592157, 1)
 theme_override_font_sizes/font_size = 10
 text = "[MM/dd/yyyy]"
 
-[node name="Points" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Achievements Container/Achivements Panel/Panel/MarginContainer/VBoxContainer/Achivement Container/HBoxContainer"]
+[node name="Points" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
@@ -223,56 +212,116 @@ text = "[X] Points"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Recommendation Container" type="VBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder"]
+[node name="Achivement PanelContainer2" type="PanelContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xyy5r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer2"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Achievement Icon" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.730529, 0.491456, 1)
+theme_override_font_sizes/font_size = 10
+text = "[Icon]"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container"]
+[node name="Achievement Name" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "[Achievement Name]"
+
+[node name="Acquired Date" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.592157, 0.592157, 0.592157, 1)
+theme_override_font_sizes/font_size = 10
+text = "[MM/dd/yyyy]"
+
+[node name="Points" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "[X] Points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "View More"
+flat = true
+
+[node name="Recommendation PanelContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
 text = "Recommended for you"
 
-[node name="Recommendation Panel" type="PanelContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container"]
+[node name="Recommendation PanelContain" type="PanelContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0m0pt")
 
-[node name="Panel" type="Panel" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container/Recommendation Panel"]
-custom_minimum_size = Vector2(420, 200)
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8qn1b")
-
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container/Recommendation Panel/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container/Recommendation Panel/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 15
 
-[node name="Achivement Container" type="PanelContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container/Recommendation Panel/Panel/MarginContainer/VBoxContainer"]
+[node name="Recommended PanelContainer" type="PanelContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xyy5r")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container/Recommendation Panel/Panel/MarginContainer/VBoxContainer/Achivement Container"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer/Recommended PanelContainer"]
 clip_contents = true
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Icon Something" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container/Recommendation Panel/Panel/MarginContainer/VBoxContainer/Achivement Container/HBoxContainer"]
+[node name="Icon Something" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer/Recommended PanelContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.730529, 0.491456, 1)
 theme_override_font_sizes/font_size = 15
 text = "[Icon]"
 vertical_alignment = 1
 
-[node name="Recommended Title" type="Label" parent="VBoxContainer/Panel Background/Contents MarginContainer/PanelContainer/Content Container/VBox Container Holder/Recommendation Container/Recommendation Panel/Panel/MarginContainer/VBoxContainer/Achivement Container/HBoxContainer"]
+[node name="Recommended Title" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer/Recommended PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "[Title]"
+vertical_alignment = 1
+
+[node name="Recommended Container2" type="PanelContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xyy5r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer/Recommended Container2"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Icon Something" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer/Recommended Container2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.730529, 0.491456, 1)
+theme_override_font_sizes/font_size = 15
+text = "[Icon]"
+vertical_alignment = 1
+
+[node name="Recommended Title" type="Label" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer/Recommended Container2/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 15
