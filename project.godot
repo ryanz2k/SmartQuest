@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SmartQuest"
-run/main_scene="uid://clbf8rwx21nj4"
+run/main_scene="uid://br7t0joh02e4o"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
