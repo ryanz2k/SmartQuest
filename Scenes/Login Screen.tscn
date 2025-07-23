@@ -1,0 +1,259 @@
+[gd_scene load_steps=19 format=3 uid="uid://cfa4ctpmyywi3"]
+
+[ext_resource type="Texture2D" uid="uid://barfne30inutm" path="res://SmartQuestbg.jpg" id="1_35pqv"]
+[ext_resource type="Texture2D" uid="uid://d4gvbblmxtkhi" path="res://SmartQuestlogo.png" id="2_kuwxp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmwcj"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+
+[sub_resource type="SystemFont" id="SystemFont_767d8"]
+font_names = PackedStringArray("Agency FB")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xklxs"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.827451, 0.827451, 0.827451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_767d8"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.827451, 0.827451, 0.827451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="SystemFont" id="SystemFont_xklxs"]
+font_names = PackedStringArray("Agency FB")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6huy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.827451, 0.827451, 0.827451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1baen"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.827451, 0.827451, 0.827451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="SystemFont" id="SystemFont_bhoxy"]
+font_names = PackedStringArray("Agency FB")
+
+[sub_resource type="SystemFont" id="SystemFont_7p2kr"]
+font_names = PackedStringArray("Agency FB")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35pqv"]
+bg_color = Color(1, 0.811765, 0.137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kuwxp"]
+bg_color = Color(1, 0.811765, 0.137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_grr1r"]
+bg_color = Color(1, 0.811765, 0.137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhoxy"]
+bg_color = Color(1, 0.811765, 0.137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2c6wt"]
+bg_color = Color(1, 0.811765, 0.137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="SystemFont" id="SystemFont_1baen"]
+font_names = PackedStringArray("Agency FB")
+
+[sub_resource type="SystemFont" id="SystemFont_a6huy"]
+font_names = PackedStringArray("Agency FB")
+
+[node name="LoginScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_35pqv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+texture = ExtResource("2_kuwxp")
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(475, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nmwcj")
+
+[node name="Control2" type="Control" parent="VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_767d8")
+theme_override_font_sizes/font_size = 25
+text = "Email"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_xklxs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_767d8")
+
+[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_xklxs")
+theme_override_font_sizes/font_size = 25
+text = "Password"
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_a6huy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1baen")
+secret = true
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_bhoxy")
+theme_override_font_sizes/font_size = 25
+text = "Forgot Password?"
+underline = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_7p2kr")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxFlat_35pqv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kuwxp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_grr1r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bhoxy")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_2c6wt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bhoxy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bhoxy")
+text = "LOGIN"
+
+[node name="Control" type="Control" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_1baen")
+theme_override_font_sizes/font_size = 25
+text = "Don't have an account?"
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.856382, 0.647239, 0.0325391, 1)
+theme_override_colors/font_focus_color = Color(0.854902, 0.647059, 0.0313726, 1)
+theme_override_colors/font_pressed_color = Color(0.854902, 0.647059, 0.0313726, 1)
+theme_override_colors/font_hover_color = Color(0.854902, 0.647059, 0.0313726, 1)
+theme_override_fonts/font = SubResource("SystemFont_a6huy")
+theme_override_font_sizes/font_size = 25
+text = "Sign Up"
+underline = 2

@@ -1,5 +1,0 @@
-[gd_scene load_steps=0 format=3 uid="uid://dv8kpyu26nlb0"]
-
-[node name="Classification" type="Control"]
-layout_mode = 3
-anchors_preset = 0
