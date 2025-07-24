@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://c44pfsccbugae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gm2h4"]
+bg_color = Color(1, 0.811765, 0.137255, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gm2h4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7r65n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hlefu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u6hwr"]
+
+[sub_resource type="Theme" id="Theme_hbjni"]
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_gm2h4")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_7r65n")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_hlefu")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_u6hwr")
+
+[node name="MobileAbout" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.941176, 0.941176, 0.941176, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top PanelContainer" type="PanelContainer" parent="Background ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gm2h4")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Top PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Top PanelContainer/MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "About"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Background ColorRect/VBoxContainer/Top PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Back"
+flat = true
+alignment = 0
+
+[node name="VScrollBar" type="VScrollBar" parent="Background ColorRect/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3
+theme = SubResource("Theme_hbjni")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/VScrollBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/VScrollBar/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Logo" type="Label" parent="Background ColorRect/VBoxContainer/VScrollBar/MarginContainer/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "[LOGO]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/VScrollBar/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Content" type="Label" parent="Background ColorRect/VBoxContainer/VScrollBar/MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+autowrap_mode = 2

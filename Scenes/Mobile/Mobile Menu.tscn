@@ -1,0 +1,129 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj463gscd6kfu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3n1vh"]
+bg_color = Color(0.941176, 0.941176, 0.941176, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[node name="MobileMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.811765, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Avatar Label" type="Label" parent="Background ColorRect/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "[Avatar Profile]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Full Name Label" type="Label" parent="Background ColorRect/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+text = "[Full Name]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EmailUsername Label" type="Label" parent="Background ColorRect/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
+text = "[Username/Email]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background Panel" type="Panel" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_3n1vh")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Background Panel"]
+layout_mode = 2
+offset_right = 480.0
+offset_bottom = 380.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Profile Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Profile"
+
+[node name="Achievements Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Achievements"
+
+[node name="Payment Method Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Payment Method"
+
+[node name="Settings Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Settings"
+
+[node name="About Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "About"
+
+[node name="Terms and Agreement Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Terms and Agreement"
+
+[node name="Logout Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Logout"

@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dchdk4yeg17ph"]
+[gd_scene load_steps=2 format=3 uid="uid://jlx8spvln67g"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u637x"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f784v"]
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 
-[node name="MobileStudentMenu" type="Control"]
+[node name="MobileParentMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,10 +44,12 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="VBoxContainer/Top MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "[Avatar Profile]"
 horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Full Name" type="Label" parent="VBoxContainer/Top MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -64,44 +66,50 @@ clip_contents = true
 custom_minimum_size = Vector2(480, 600)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_u637x")
+theme_override_styles/panel = SubResource("StyleBoxFlat_f784v")
 
-[node name="Content MarginContainer" type="MarginContainer" parent="VBoxContainer/Background Panel"]
+[node name="Buttons MarginContainer" type="MarginContainer" parent="VBoxContainer/Background Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Content MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Background Panel/Buttons MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 15
 
-[node name="Button" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer/Background Panel/Buttons MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Profile"
 
-[node name="Button2" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="VBoxContainer/Background Panel/Buttons MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-text = "Achievements"
+text = "Payment Method"
 
-[node name="Button3" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+[node name="Button3" type="Button" parent="VBoxContainer/Background Panel/Buttons MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Settings"
 
-[node name="Button4" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+[node name="Button4" type="Button" parent="VBoxContainer/Background Panel/Buttons MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "About"
 
-[node name="Button5" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+[node name="Button5" type="Button" parent="VBoxContainer/Background Panel/Buttons MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Terms and Agreement"
 
-[node name="Button6" type="Button" parent="VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
+[node name="Button6" type="Button" parent="VBoxContainer/Background Panel/Buttons MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Logout"
