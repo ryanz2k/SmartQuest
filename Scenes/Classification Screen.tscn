@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c50ni1cs4blaj"]
+[gd_scene load_steps=10 format=3 uid="uid://c50ni1cs4blaj"]
 
 [ext_resource type="Texture2D" uid="uid://barfne30inutm" path="res://SmartQuestbg.jpg" id="1_82oqk"]
 [ext_resource type="Texture2D" uid="uid://bhc6jsccfhb38" path="res://user_icon.png" id="2_ov45y"]
+[ext_resource type="Script" uid="uid://bmdm8vs0qhydu" path="res://Scripts/classification.gd" id="3_ov45y"]
 
 [sub_resource type="SystemFont" id="SystemFont_mlwvx"]
 font_names = PackedStringArray("Agency FB")
@@ -34,6 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_ov45y")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -92,7 +94,7 @@ theme_override_constants/separation = 25
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="PupilsBtn" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
@@ -113,7 +115,7 @@ icon = ExtResource("2_ov45y")
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ParentsBtn" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
@@ -134,7 +136,7 @@ icon = ExtResource("2_ov45y")
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ModuleCreatorBtn" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
@@ -166,7 +168,7 @@ theme_override_fonts/font = SubResource("SystemFont_1baen")
 theme_override_font_sizes/font_size = 25
 text = "already have an"
 
-[node name="LinkButton" type="LinkButton" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="LoginLinkBtn" type="LinkButton" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.856382, 0.647239, 0.0325391, 1)
 theme_override_colors/font_focus_color = Color(0.854902, 0.647059, 0.0313726, 1)
@@ -176,3 +178,8 @@ theme_override_fonts/font = SubResource("SystemFont_a6huy")
 theme_override_font_sizes/font_size = 25
 text = "account?"
 underline = 2
+
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/PupilsBtn" to="." method="_on_pupils_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ParentsBtn" to="." method="_on_parents_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ModuleCreatorBtn" to="." method="_on_module_creator_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LoginLinkBtn" to="." method="_on_login_link_btn_pressed"]
