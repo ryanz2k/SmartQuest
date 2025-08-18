@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://1wtidi71e6yj"]
 
-[ext_resource type="Texture2D" uid="uid://w0gp2rxx5yfk" path="res://Assets/Buttons/Notification.png" id="1_7i3pb"]
+[ext_resource type="Texture2D" uid="uid://w0gp2rxx5yfk" path="res://Assets/Buttons/Notification.png" id="1_sufsm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rf6t5"]
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
@@ -24,7 +24,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 shadow_color = Color(0, 0, 0, 0.34902)
-shadow_size = 2
+shadow_size = 1
 shadow_offset = Vector2(0, 1.5)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ydms"]
@@ -51,7 +51,7 @@ shadow_color = Color(0, 0, 0, 0.34902)
 shadow_size = 2
 shadow_offset = Vector2(0, 1.5)
 
-[node name="MobileStudentDashbaord" type="Control"]
+[node name="MobileStudentDashbaordScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -109,7 +109,7 @@ text = "[Role]"
 
 [node name="Button" type="Button" parent="VBoxContainer/Top MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_icons/icon = ExtResource("1_7i3pb")
+theme_override_icons/icon = ExtResource("1_sufsm")
 flat = true
 
 [node name="Background Panel" type="Panel" parent="VBoxContainer"]

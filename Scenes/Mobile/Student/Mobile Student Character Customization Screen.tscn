@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bp551an6qyk"]
 
-[node name="MobileStudentCharacterCustomization" type="Control"]
+[node name="MobileStudentCharacterCustomizationScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

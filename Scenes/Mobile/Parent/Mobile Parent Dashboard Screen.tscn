@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://55wv3xjxrlad"]
 
-[ext_resource type="Texture2D" uid="uid://w0gp2rxx5yfk" path="res://Assets/Buttons/Notification.png" id="1_bjkky"]
-[ext_resource type="Texture2D" uid="uid://c6pqijk7f16gx" path="res://Assets/Circle.png" id="2_bjkky"]
+[ext_resource type="Texture2D" uid="uid://w0gp2rxx5yfk" path="res://Assets/Buttons/Notification.png" id="1_ynyq3"]
+[ext_resource type="Texture2D" uid="uid://c6pqijk7f16gx" path="res://Assets/Circle.png" id="2_4dica"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_121on"]
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
@@ -42,7 +42,7 @@ shadow_color = Color(0, 0, 0, 0.34902)
 shadow_size = 2
 shadow_offset = Vector2(0, 1.5)
 
-[node name="MobileParentDashboard" type="Control"]
+[node name="MobileParentDashboardScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -100,7 +100,7 @@ text = "[Role]"
 
 [node name="Button" type="Button" parent="VBoxContainer/Top MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_icons/icon = ExtResource("1_bjkky")
+theme_override_icons/icon = ExtResource("1_ynyq3")
 flat = true
 
 [node name="Panel Background" type="Panel" parent="VBoxContainer"]
@@ -155,25 +155,25 @@ alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Children VBoxContainer/Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_icons/icon = ExtResource("2_bjkky")
+theme_override_icons/icon = ExtResource("2_4dica")
 flat = true
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Children VBoxContainer/Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_icons/icon = ExtResource("2_bjkky")
+theme_override_icons/icon = ExtResource("2_4dica")
 flat = true
 icon_alignment = 1
 
 [node name="Button3" type="Button" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Children VBoxContainer/Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_icons/icon = ExtResource("2_bjkky")
+theme_override_icons/icon = ExtResource("2_4dica")
 flat = true
 icon_alignment = 1
 
 [node name="Button4" type="Button" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Children VBoxContainer/Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_icons/icon = ExtResource("2_bjkky")
+theme_override_icons/icon = ExtResource("2_4dica")
 flat = true
 icon_alignment = 1
 

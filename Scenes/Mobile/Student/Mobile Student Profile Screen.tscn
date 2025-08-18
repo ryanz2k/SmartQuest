@@ -1,0 +1,217 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc8cjnwvrn4lx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mel7"]
+bg_color = Color(1, 0.811765, 0.137255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hyyki"]
+bg_color = Color(0.941176, 0.941176, 0.941176, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7oilo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4xaa"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.34902)
+shadow_size = 3
+shadow_offset = Vector2(0, 2)
+
+[node name="MobileStudentProfileScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.811765, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top PanelContainer" type="PanelContainer" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0mel7")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/VBoxContainer/Top PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Top PanelContainer/MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Profile"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Background/VBoxContainer/Top PanelContainer/MarginContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Back"
+flat = true
+alignment = 0
+
+[node name="Profile  MarginContainer" type="MarginContainer" parent="Background/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/VBoxContainer/Profile  MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Profile  MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "[Avatar Profile]"
+horizontal_alignment = 1
+
+[node name="Full Name" type="Label" parent="Background/VBoxContainer/Profile  MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "[Full Name Here]"
+horizontal_alignment = 1
+
+[node name="Background Panel" type="Panel" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(480, 600)
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_styles/panel = SubResource("StyleBoxFlat_hyyki")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/VBoxContainer/Background Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+text = "Edit Profile"
+
+[node name="PanelContainer" type="PanelContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7oilo")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Information"
+
+[node name="PanelContainer" type="PanelContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4xaa")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="First Name HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/First Name HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "First Name:"
+
+[node name="First Name" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/First Name HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[First Name]"
+
+[node name="Last Name HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Last Name HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Last Name:"
+
+[node name="First Name" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Last Name HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[Last Name]"
+
+[node name="Email HBoxContainer2" type="HBoxContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Email HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Email:"
+
+[node name="First Name" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Email HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[example@gmail.com]"
+
+[node name="Mobile No HBoxContainer2" type="HBoxContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Mobile No HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Mobile No.:"
+
+[node name="First Name" type="Label" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Mobile No HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[0000 000 0000]"

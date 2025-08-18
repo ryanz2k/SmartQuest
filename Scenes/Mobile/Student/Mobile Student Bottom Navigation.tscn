@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfa8h3k8c6vre"]
+[gd_scene load_steps=6 format=3 uid="uid://cnndrv170m8i6"]
 
-[ext_resource type="Texture2D" uid="uid://dvxi8ly6fd42k" path="res://Assets/Buttons/Home.png" id="1_3sxln"]
-[ext_resource type="Texture2D" uid="uid://c8wp3lyn8jxcq" path="res://Assets/Buttons/User.png" id="2_p7bc6"]
-[ext_resource type="Texture2D" uid="uid://yq61g7snoc5t" path="res://Assets/Buttons/Menu.png" id="3_yv242"]
+[ext_resource type="Texture2D" uid="uid://dvxi8ly6fd42k" path="res://Assets/Buttons/Home.png" id="1_130dt"]
+[ext_resource type="Texture2D" uid="uid://dhbiyxo6kk2n5" path="res://Assets/Buttons/Module.png" id="2_5dol5"]
+[ext_resource type="Texture2D" uid="uid://c8wp3lyn8jxcq" path="res://Assets/Buttons/User.png" id="3_hlbr7"]
+[ext_resource type="Texture2D" uid="uid://yq61g7snoc5t" path="res://Assets/Buttons/Menu.png" id="4_hhja7"]
 
-[node name="MobileParentMainScreen" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfqgy"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="MobileStudentBottomNavigation" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,6 +32,7 @@ size_flags_vertical = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mfqgy")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer"]
 layout_mode = 2
@@ -35,25 +42,31 @@ theme_override_constants/margin_bottom = 25
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 100
+theme_override_constants/separation = 90
 
 [node name="Home Button" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
-theme_override_icons/icon = ExtResource("1_3sxln")
+theme_override_icons/icon = ExtResource("1_130dt")
+flat = true
 icon_alignment = 1
-vertical_icon_alignment = 0
+
+[node name="Module Button" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+theme_override_icons/icon = ExtResource("2_5dol5")
+flat = true
 
 [node name="Character Customization Button" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
-theme_override_icons/icon = ExtResource("2_p7bc6")
+theme_override_icons/icon = ExtResource("3_hlbr7")
+flat = true
 icon_alignment = 1
-vertical_icon_alignment = 0
 
 [node name="Menu Button" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
-theme_override_icons/icon = ExtResource("3_yv242")
+theme_override_icons/icon = ExtResource("4_hhja7")
+flat = true
 icon_alignment = 1
-vertical_icon_alignment = 0
