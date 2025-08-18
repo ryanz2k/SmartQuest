@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://br26ap270u42x"]
+[gd_scene format=3 uid="uid://ccpi4opb33gj8"]
 
-[node name="MobileStudentProfileScreen" type="Control"]
+[node name="MobileStudentAchievementsScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

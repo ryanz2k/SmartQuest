@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnvh6kqm13dtm"]
+[gd_scene load_steps=5 format=3 uid="uid://cwju1mblyy1rm"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecga6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vi1e7"]
 bg_color = Color(1, 0.811765, 0.137255, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e7tm2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m8to"]
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nfl4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwcui"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10eb0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77gar"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
@@ -21,7 +21,7 @@ shadow_color = Color(0, 0, 0, 0.34902)
 shadow_size = 3
 shadow_offset = Vector2(0, 2)
 
-[node name="MobileParentProfileScreen" type="Control"]
+[node name="MobileProfileScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +51,7 @@ grow_vertical = 2
 [node name="Top PanelContainer" type="PanelContainer" parent="Background/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ecga6")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vi1e7")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background/VBoxContainer/Top PanelContainer"]
 layout_mode = 2
@@ -105,7 +105,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(480, 600)
 layout_mode = 2
 size_flags_vertical = 10
-theme_override_styles/panel = SubResource("StyleBoxFlat_e7tm2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8m8to")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background/VBoxContainer/Background Panel"]
 clip_contents = true
@@ -134,7 +134,7 @@ text = "Edit Profile"
 
 [node name="PanelContainer" type="PanelContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8nfl4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vwcui")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
@@ -147,7 +147,7 @@ text = "Information"
 
 [node name="PanelContainer" type="PanelContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_10eb0")
+theme_override_styles/panel = SubResource("StyleBoxFlat_77gar")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2

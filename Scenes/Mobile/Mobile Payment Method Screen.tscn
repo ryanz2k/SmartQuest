@@ -3,7 +3,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_850f5"]
 bg_color = Color(1, 0.811765, 0.137255, 1)
 
-[node name="MobilePaymentMethod" type="Control"]
+[node name="MobilePaymentMethodScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

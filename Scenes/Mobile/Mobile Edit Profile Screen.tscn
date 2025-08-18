@@ -5,7 +5,7 @@ bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 
-[node name="MobileEditProfile" type="Control"]
+[node name="MobileEditProfileScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
