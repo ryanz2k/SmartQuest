@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqqoywf1scuk4"]
+[gd_scene load_steps=4 format=3 uid="uid://csbmya0oiu4vh"]
 
-[ext_resource type="Texture2D" uid="uid://bixg5no76cnys" path="res://Assets/Icons/Book Icon.svg" id="1_t7vqk"]
+[ext_resource type="Texture2D" uid="uid://bixg5no76cnys" path="res://Assets/Icons/Book Icon.svg" id="1_mi3l8"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wy2hl"]
-bg_color = Color(1, 0.811765, 0.137255, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qnmn"]
+bg_color = Color(1, 0.419608, 0, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -12,14 +12,14 @@ shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
 shadow_size = 2
 shadow_offset = Vector2(3, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7vqk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_754jh"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="MyModulesScreen" type="Control"]
+[node name="ExclusiveModuleScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,7 +37,7 @@ theme_override_constants/separation = 10
 [node name="Panel" type="Panel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_wy2hl")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5qnmn")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel"]
 layout_mode = 1
@@ -59,7 +59,7 @@ theme_override_constants/separation = 10
 clip_contents = true
 custom_minimum_size = Vector2(90, 50)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_t7vqk")
+theme_override_styles/panel = SubResource("StyleBoxFlat_754jh")
 
 [node name="Module Icon TextureRect" type="TextureRect" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel"]
 layout_mode = 1
@@ -68,11 +68,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_t7vqk")
+texture = ExtResource("1_mi3l8")
 expand_mode = 4
 
-[node name="Module Title Label" type="Label" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Module Title Label" type="Label" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20
 text = "[Module TItle]"
+
+[node name="Module Author Label" type="Label" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "[Author Name]"

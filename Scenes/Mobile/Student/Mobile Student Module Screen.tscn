@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://detbcy4oknmfh"]
+[gd_scene load_steps=2 format=3 uid="uid://detbcy4oknmfh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1yo7s"]
+bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 
 [node name="MobileStudentModuleScreen" type="Control"]
 layout_mode = 3
@@ -8,11 +11,58 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1, 0.988675)
+color = Color(1, 0.811765, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Modules"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Left Button" type="Button" parent="Background ColorRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(235, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "My Modules"
+
+[node name="Right Button" type="Button" parent="Background ColorRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(235, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Exclusive Modules"
+
+[node name="Panel" type="Panel" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1yo7s")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20

@@ -1,16 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://2r83y7ntr4hb"]
+[gd_scene load_steps=8 format=3 uid="uid://bethpl6y2yw7t"]
 
-[ext_resource type="Texture2D" uid="uid://bixg5no76cnys" path="res://Assets/Icons/Book Icon.svg" id="1_iqkep"]
+[ext_resource type="Texture2D" uid="uid://bixg5no76cnys" path="res://Assets/Icons/Book Icon.svg" id="1_qfocg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqojl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcps1"]
 bg_color = Color(1, 0.811765, 0.137255, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqkep"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5e7el"]
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaiak"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbuwa"]
 bg_color = Color(1, 0.811765, 0.137255, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
@@ -20,14 +20,14 @@ shadow_color = Color(0.662452, 0.662452, 0.662452, 0.6)
 shadow_size = 2
 shadow_offset = Vector2(3, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_154el"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6g0ef"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngjyh"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tngxa"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
@@ -37,7 +37,7 @@ shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
 shadow_size = 2
 shadow_offset = Vector2(3, 3)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pnyc4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qy7cl"]
 content_margin_left = 10.0
 content_margin_top = 5.0
 content_margin_right = 10.0
@@ -48,7 +48,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Dummy" type="Control"]
+[node name="MobileStudentModuleLevelScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,7 +76,7 @@ grow_vertical = 2
 [node name="Top PanelContainer" type="PanelContainer" parent="Background ColorRect/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_eqojl")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rcps1")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Top PanelContainer"]
 layout_mode = 2
@@ -105,7 +105,7 @@ alignment = 0
 [node name="Panel" type="Panel" parent="Background ColorRect/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_iqkep")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5e7el")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Panel"]
 layout_mode = 1
@@ -126,7 +126,7 @@ theme_override_constants/separation = 15
 [node name="Top Panel" type="Panel" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jaiak")
+theme_override_styles/panel = SubResource("StyleBoxFlat_kbuwa")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Top Panel"]
 layout_mode = 1
@@ -148,7 +148,7 @@ theme_override_constants/separation = 10
 clip_contents = true
 custom_minimum_size = Vector2(90, 50)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_154el")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6g0ef")
 
 [node name="Module Icon TextureRect" type="TextureRect" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Top Panel/MarginContainer/HBoxContainer/Panel"]
 layout_mode = 1
@@ -157,7 +157,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_iqkep")
+texture = ExtResource("1_qfocg")
 expand_mode = 4
 
 [node name="Module Title Label" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Top Panel/MarginContainer/HBoxContainer"]
@@ -168,7 +168,7 @@ text = "[Module TItle]"
 
 [node name="Rate PanelContain" type="PanelContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ngjyh")
+theme_override_styles/panel = SubResource("StyleBoxFlat_tngxa")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Rate PanelContain"]
 layout_mode = 2
@@ -204,7 +204,7 @@ theme_override_constants/separation = 5
 
 [node name="Level PanelContainer" type="PanelContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Rate PanelContain/MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pnyc4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_qy7cl")
 
 [node name="Recommended Title" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Rate PanelContain/MarginContainer/VBoxContainer/VBoxContainer/Level PanelContainer"]
 layout_mode = 2
