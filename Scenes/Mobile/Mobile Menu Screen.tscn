@@ -1,19 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://cj463gscd6kfu"]
 
+[ext_resource type="StyleBox" uid="uid://dlwi030ng0e53" path="res://Assets/Buttons/White Button.tres" id="1_ip7fi"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3n1vh"]
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu3pi"]
-bg_color = Color(1, 1, 1, 1)
-shadow_size = 5
-shadow_offset = Vector2(2, 3)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys0dt"]
 bg_color = Color(0.811765, 0.105882, 0.0980392, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
 shadow_size = 5
-shadow_offset = Vector2(2, 3)
+shadow_offset = Vector2(3, 3)
 
 [node name="MobileMenuScreen" type="Control"]
 layout_mode = 3
@@ -101,7 +103,7 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_uu3pi")
+theme_override_styles/normal = ExtResource("1_ip7fi")
 text = "Profile"
 
 [node name="Payment Method Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
@@ -109,7 +111,7 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_uu3pi")
+theme_override_styles/normal = ExtResource("1_ip7fi")
 text = "Payment Method"
 
 [node name="Settings Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
@@ -117,7 +119,7 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_uu3pi")
+theme_override_styles/normal = ExtResource("1_ip7fi")
 text = "Settings"
 
 [node name="About Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
@@ -125,7 +127,7 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_uu3pi")
+theme_override_styles/normal = ExtResource("1_ip7fi")
 text = "About"
 
 [node name="Terms and Agreement Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
@@ -133,7 +135,7 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_uu3pi")
+theme_override_styles/normal = ExtResource("1_ip7fi")
 text = "Terms and Agreement"
 
 [node name="Logout Button" type="Button" parent="Background ColorRect/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]

@@ -1,16 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqqoywf1scuk4"]
 
 [ext_resource type="Texture2D" uid="uid://bixg5no76cnys" path="res://Assets/Icons/Book Icon.svg" id="1_t7vqk"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wy2hl"]
-bg_color = Color(1, 0.811765, 0.137255, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(3, 3)
+[ext_resource type="StyleBox" uid="uid://01b6swbpcotg" path="res://Assets/Buttons/Yellow Button.tres" id="1_yfhp3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t7vqk"]
 bg_color = Color(1, 1, 1, 1)
@@ -34,34 +25,29 @@ anchor_right = 1.0
 grow_horizontal = 2
 theme_override_constants/separation = 10
 
-[node name="Panel" type="Panel" parent="VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_wy2hl")
+theme_override_styles/panel = ExtResource("1_yfhp3")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Panel" type="Panel" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+[node name="Panel" type="Panel" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(90, 50)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_t7vqk")
 
-[node name="Module Icon TextureRect" type="TextureRect" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer/Panel"]
+[node name="Module Icon TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,7 +57,7 @@ grow_vertical = 2
 texture = ExtResource("1_t7vqk")
 expand_mode = 4
 
-[node name="Module Title Label" type="Label" parent="VBoxContainer/Panel/MarginContainer/HBoxContainer"]
+[node name="Module Title Label" type="Label" parent="VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 20

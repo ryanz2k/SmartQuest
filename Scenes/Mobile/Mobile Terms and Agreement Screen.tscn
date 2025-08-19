@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cn8idpgebuady"]
+[gd_scene load_steps=8 format=3 uid="uid://cn8idpgebuady"]
+
+[ext_resource type="Texture2D" uid="uid://njpp6lbyq6or" path="res://Assets/Icons/Return Icon.svg" id="1_56lud"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lny0f"]
 bg_color = Color(1, 0.811765, 0.137255, 1)
@@ -62,11 +64,12 @@ text = "Terms and Agreement"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Background ColorRect/VBoxContainer/Top PanelContainer/MarginContainer"]
+[node name="Return Button" type="Button" parent="Background ColorRect/VBoxContainer/Top PanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Back"
+icon = ExtResource("1_56lud")
 flat = true
 alignment = 0
 

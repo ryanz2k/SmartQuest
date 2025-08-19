@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bethpl6y2yw7t"]
+[gd_scene load_steps=9 format=3 uid="uid://bethpl6y2yw7t"]
 
+[ext_resource type="Texture2D" uid="uid://njpp6lbyq6or" path="res://Assets/Icons/Return Icon.svg" id="1_kbuwa"]
 [ext_resource type="Texture2D" uid="uid://bixg5no76cnys" path="res://Assets/Icons/Book Icon.svg" id="1_qfocg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcps1"]
@@ -94,11 +95,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="Background ColorRect/VBoxContainer/Top PanelContainer/MarginContainer"]
-clip_contents = true
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Back"
+icon = ExtResource("1_kbuwa")
 flat = true
 alignment = 0
 
@@ -192,11 +193,15 @@ alignment = 1
 
 [node name="Like Button" type="Button" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Rate PanelContain/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Like"
+flat = true
 
 [node name="Dislike Button" type="Button" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Rate PanelContain/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Dislike"
+flat = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Rate PanelContain/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -208,7 +213,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_qy7cl")
 
 [node name="Recommended Title" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/Rate PanelContain/MarginContainer/VBoxContainer/VBoxContainer/Level PanelContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 15
 text = "[Level Title]"
 vertical_alignment = 1

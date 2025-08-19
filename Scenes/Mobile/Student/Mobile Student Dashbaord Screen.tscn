@@ -1,6 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://1wtidi71e6yj"]
+[gd_scene load_steps=10 format=3 uid="uid://1wtidi71e6yj"]
 
 [ext_resource type="Texture2D" uid="uid://w0gp2rxx5yfk" path="res://Assets/Buttons/Notification.png" id="1_sufsm"]
+[ext_resource type="StyleBox" uid="uid://dlwi030ng0e53" path="res://Assets/Buttons/White Button.tres" id="2_a0htd"]
+[ext_resource type="StyleBox" uid="uid://cskhjui46xdo1" path="res://Assets/Buttons/Gray Panel Color.tres" id="3_0dbw8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sufsm"]
 
@@ -20,50 +22,6 @@ VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_0dbw8")
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m0pt"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(3, 3)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qn1b"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(3, 3)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ydms"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(3, 3)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyy5r"]
-content_margin_left = 10.0
-content_margin_top = 5.0
-content_margin_right = 10.0
-content_margin_bottom = 5.0
-bg_color = Color(0.941176, 0.941176, 0.941176, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
-shadow_size = 2
-shadow_offset = Vector2(3, 3)
 
 [node name="MobileStudentDashbaordScreen" type="Control"]
 layout_mode = 3
@@ -163,13 +121,9 @@ theme_override_font_sizes/font_size = 20
 text = "Performance Statistics"
 
 [node name="Performance PanelContainer" type="PanelContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Performance VBoxContainer"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_0m0pt")
-
-[node name="Panel" type="Panel" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Performance VBoxContainer/Performance PanelContainer"]
 custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8qn1b")
+theme_override_styles/panel = ExtResource("2_a0htd")
 
 [node name="Achievements VBoxContainer" type="VBoxContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -182,7 +136,7 @@ text = "Recent Achivements"
 
 [node name="Achivements PanelContainer" type="PanelContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8ydms")
+theme_override_styles/panel = ExtResource("2_a0htd")
 
 [node name="MarginContainer" type="MarginContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer"]
 layout_mode = 2
@@ -197,7 +151,7 @@ theme_override_constants/separation = 15
 
 [node name="Achivement PanelContainer" type="PanelContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xyy5r")
+theme_override_styles/panel = ExtResource("3_0dbw8")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer"]
 clip_contents = true
@@ -237,7 +191,7 @@ vertical_alignment = 1
 
 [node name="Achivement PanelContainer2" type="PanelContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xyy5r")
+theme_override_styles/panel = ExtResource("3_0dbw8")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Achievements VBoxContainer/Achivements PanelContainer/MarginContainer/VBoxContainer/Achivement PanelContainer2"]
 clip_contents = true
@@ -293,7 +247,7 @@ text = "Recommended for you"
 
 [node name="Recommendation PanelContain" type="PanelContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_0m0pt")
+theme_override_styles/panel = ExtResource("2_a0htd")
 
 [node name="MarginContainer" type="MarginContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain"]
 layout_mode = 2
@@ -308,7 +262,7 @@ theme_override_constants/separation = 15
 
 [node name="Recommended PanelContainer" type="PanelContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xyy5r")
+theme_override_styles/panel = ExtResource("3_0dbw8")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer/Recommended PanelContainer"]
 clip_contents = true
@@ -331,7 +285,7 @@ vertical_alignment = 1
 
 [node name="Recommended Container2" type="PanelContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xyy5r")
+theme_override_styles/panel = ExtResource("3_0dbw8")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VScrollBar/VBoxContainer/Background Panel/Content MarginContainer/VBoxContainer/Recommendation PanelContainer/Recommendation PanelContain/MarginContainer/VBoxContainer/Recommended Container2"]
 clip_contents = true

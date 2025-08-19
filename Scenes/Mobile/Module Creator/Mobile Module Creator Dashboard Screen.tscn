@@ -1,45 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwvsbss8splaw"]
+[gd_scene load_steps=5 format=3 uid="uid://cwvsbss8splaw"]
 
 [ext_resource type="Texture2D" uid="uid://w0gp2rxx5yfk" path="res://Assets/Buttons/Notification.png" id="1_7kf32"]
+[ext_resource type="StyleBox" uid="uid://dlwi030ng0e53" path="res://Assets/Buttons/White Button.tres" id="2_hkr13"]
+[ext_resource type="StyleBox" uid="uid://cskhjui46xdo1" path="res://Assets/Buttons/Gray Panel Color.tres" id="3_dxbo7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jo2r"]
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkr13"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0.34902)
-shadow_size = 3
-shadow_offset = Vector2(0, 1.5)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxbo7"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0.34902)
-shadow_size = 3
-shadow_offset = Vector2(0, 1.5)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y841r"]
-content_margin_left = 10.0
-content_margin_top = 5.0
-content_margin_right = 10.0
-content_margin_bottom = 5.0
-bg_color = Color(0.941176, 0.941176, 0.941176, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-shadow_color = Color(0, 0, 0, 0.34902)
-shadow_size = 2
-shadow_offset = Vector2(0, 1.5)
 
 [node name="MobileModuleCreatorDashboardScreen" type="Control"]
 layout_mode = 3
@@ -49,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -133,13 +101,13 @@ text = "Sales Overview"
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Panel" type="Panel" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer"]
+[node name="Revenue Panel" type="Panel" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_styles/panel = SubResource("StyleBoxFlat_hkr13")
+theme_override_styles/panel = ExtResource("2_hkr13")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Revenue Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -151,35 +119,35 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Revenue Panel/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Revenue Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Earned"
 horizontal_alignment = 1
 
-[node name="Amount" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="Amount" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Revenue Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.933333, 0.8, 0, 1)
 theme_override_font_sizes/font_size = 23
 text = "P [Amount]"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Revenue Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "This month"
 horizontal_alignment = 1
 
-[node name="Panel2" type="Panel" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer"]
+[node name="Student Panel" type="Panel" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_vertical = 6
-theme_override_styles/panel = SubResource("StyleBoxFlat_hkr13")
+theme_override_styles/panel = ExtResource("2_hkr13")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel2"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Student Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -191,24 +159,24 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel2/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Student Panel/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Student Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
 text = "👤"
 horizontal_alignment = 1
 
-[node name="Amount" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+[node name="Amount" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Student Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.933333, 0.8, 0, 1)
 theme_override_font_sizes/font_size = 23
 text = "[x]"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Panel2/MarginContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Sales VBoxContainer/HBoxContainer/Student Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Active Pupils"
@@ -224,13 +192,9 @@ theme_override_font_sizes/font_size = 20
 text = "Sales Statistics"
 
 [node name="Performance PanelContainer" type="PanelContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Performance VBoxContainer"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_dxbo7")
-
-[node name="Panel" type="Panel" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Performance VBoxContainer/Performance PanelContainer"]
 custom_minimum_size = Vector2(420, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_hkr13")
+theme_override_styles/panel = ExtResource("2_hkr13")
 
 [node name="Module Sale VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer"]
 layout_mode = 2
@@ -243,7 +207,7 @@ text = "My Modules"
 
 [node name="Recommendation PanelContainer" type="PanelContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Module Sale VBoxContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_dxbo7")
+theme_override_styles/panel = ExtResource("2_hkr13")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Module Sale VBoxContainer/Recommendation PanelContainer"]
 layout_mode = 2
@@ -259,7 +223,7 @@ theme_override_constants/separation = 15
 [node name="Module PanelContainer" type="PanelContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Module Sale VBoxContainer/Recommendation PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_y841r")
+theme_override_styles/panel = ExtResource("3_dxbo7")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Module Sale VBoxContainer/Recommendation PanelContainer/MarginContainer/VBoxContainer/Module PanelContainer"]
 clip_contents = true
@@ -290,7 +254,7 @@ vertical_alignment = 1
 [node name="Module PanelContainer2" type="PanelContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Module Sale VBoxContainer/Recommendation PanelContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_y841r")
+theme_override_styles/panel = ExtResource("3_dxbo7")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel Background/Content MarginContainer/Content VBoxContainer/Module Sale VBoxContainer/Recommendation PanelContainer/MarginContainer/VBoxContainer/Module PanelContainer2"]
 clip_contents = true

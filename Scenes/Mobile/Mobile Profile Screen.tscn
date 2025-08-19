@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwju1mblyy1rm"]
+[gd_scene load_steps=7 format=3 uid="uid://cwju1mblyy1rm"]
+
+[ext_resource type="Texture2D" uid="uid://njpp6lbyq6or" path="res://Assets/Icons/Return Icon.svg" id="1_kue4j"]
+[ext_resource type="StyleBox" uid="uid://01b6swbpcotg" path="res://Assets/Buttons/Yellow Button.tres" id="2_vi1n2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vi1e7"]
 bg_color = Color(1, 0.811765, 0.137255, 1)
@@ -68,12 +71,13 @@ text = "Profile"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Background/VBoxContainer/Top PanelContainer/MarginContainer"]
+[node name="Return Button" type="Button" parent="Background/VBoxContainer/Top PanelContainer/MarginContainer"]
 clip_contents = true
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Back"
+icon = ExtResource("1_kue4j")
 flat = true
 alignment = 0
 
@@ -127,9 +131,12 @@ layout_mode = 2
 theme_override_constants/separation = 15
 
 [node name="Button" type="Button" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("2_vi1n2")
 text = "Edit Profile"
 
 [node name="PanelContainer" type="PanelContainer" parent="Background/VBoxContainer/Background Panel/MarginContainer/VBoxContainer"]

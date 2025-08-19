@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5sa2v3byxp2l"
-path="res://.godot/imported/Book Icon.svg-228f5d3a43d2c45ddcd05d309ffbfb84.ctex"
+uid="uid://njpp6lbyq6or"
+path="res://.godot/imported/Return Icon.svg-fe977faa390fc428c2a75e03ec423e6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Buttons/Book Icon.svg"
-dest_files=["res://.godot/imported/Book Icon.svg-228f5d3a43d2c45ddcd05d309ffbfb84.ctex"]
+source_file="res://Assets/Icons/Return Icon.svg"
+dest_files=["res://.godot/imported/Return Icon.svg-fe977faa390fc428c2a75e03ec423e6b.ctex"]
 
 [params]
 

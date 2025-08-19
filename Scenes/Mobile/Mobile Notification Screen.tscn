@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://2r83y7ntr4hb"]
+[gd_scene format=3 uid="uid://dpvl48snxg66m"]
 
-[node name="Dummy" type="Control"]
+[node name="MobileNotificationScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

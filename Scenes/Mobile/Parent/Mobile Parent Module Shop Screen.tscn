@@ -1,0 +1,171 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4670wx734c6d"]
+
+[ext_resource type="Texture2D" uid="uid://njpp6lbyq6or" path="res://Assets/Icons/Return Icon.svg" id="1_o8iok"]
+[ext_resource type="Theme" uid="uid://rrutxd55v3lj" path="res://Assets/Buttons/VScrollBar.tres" id="2_kvoci"]
+[ext_resource type="StyleBox" uid="uid://01b6swbpcotg" path="res://Assets/Buttons/Yellow Button.tres" id="3_4hwtf"]
+[ext_resource type="StyleBox" uid="uid://c0trb7gsmo34i" path="res://Assets/Buttons/Orange Panel Color.tres" id="3_h0sjv"]
+[ext_resource type="Texture2D" uid="uid://bixg5no76cnys" path="res://Assets/Icons/Book Icon.svg" id="4_4hwtf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0sjv"]
+bg_color = Color(0.941176, 0.941176, 0.941176, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oj2qo"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="MobileParentModuleShopScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.811765, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Top MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Return Button" type="Button" parent="Background ColorRect/VBoxContainer/Top MarginContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+icon = ExtResource("1_o8iok")
+flat = true
+alignment = 0
+
+[node name="Panel" type="Panel" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_h0sjv")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Search Bar LineEdit" type="LineEdit" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Results"
+
+[node name="VScrollBar" type="VScrollBar" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 1
+theme = ExtResource("2_kvoci")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/separation = 10
+
+[node name="Module PanelContainer" type="PanelContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_h0sjv")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer"]
+texture_filter = 4
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_oj2qo")
+
+[node name="Module Icon TextureRect" type="TextureRect" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("4_4hwtf")
+expand_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Module Title Label" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "[Module TItle]"
+autowrap_mode = 1
+
+[node name="Module Author Label" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "[Module Author]"
+autowrap_mode = 1
+
+[node name="Button" type="Button" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/VScrollBar/VBoxContainer/Module PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("3_4hwtf")
+text = "[Price]"

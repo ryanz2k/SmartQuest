@@ -1,4 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2441ui73su22"]
+[gd_scene load_steps=5 format=3 uid="uid://d2441ui73su22"]
+
+[ext_resource type="Texture2D" uid="uid://njpp6lbyq6or" path="res://Assets/Icons/Return Icon.svg" id="1_r4du5"]
+[ext_resource type="StyleBox" uid="uid://bli12ty2jn322" path="res://Assets/Buttons/Red Button.tres" id="2_ywdbs"]
+[ext_resource type="StyleBox" uid="uid://01b6swbpcotg" path="res://Assets/Buttons/Yellow Button.tres" id="3_urxfr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sgwtv"]
 bg_color = Color(0.941176, 0.941176, 0.941176, 1)
@@ -12,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_vertical_guides_ = [-86.0]
 
 [node name="Background ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -33,28 +38,27 @@ grow_vertical = 2
 
 [node name="Top MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_constants/margin_left = 50
+theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 110
+theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Background ColorRect/VBoxContainer/Top MarginContainer"]
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Top MarginContainer"]
+layout_direction = 2
 layout_mode = 2
-
-[node name="Button" type="Button" parent="Background ColorRect/VBoxContainer/Top MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "Back"
-flat = true
-
-[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Top MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "Edit Profile"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Return Button" type="Button" parent="Background ColorRect/VBoxContainer/Top MarginContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+icon = ExtResource("1_r4du5")
+flat = true
+alignment = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -115,15 +119,15 @@ text = "Last Name: "
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="MobileNo VBoxContainer3" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="MobileNo VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/MobileNo VBoxContainer3"]
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/MobileNo VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Mobile No.: "
 
-[node name="LineEdit" type="LineEdit" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/MobileNo VBoxContainer3"]
+[node name="LineEdit" type="LineEdit" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/MobileNo VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 
@@ -132,9 +136,15 @@ layout_mode = 2
 alignment = 1
 
 [node name="Cancel Button" type="Button" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 40)
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("2_ywdbs")
 text = "Cancel"
 
 [node name="Save Button" type="Button" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("3_urxfr")
 text = "Save"

@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3 uid="uid://dspeauyoxd1fp"]
+
+[ext_resource type="StyleBox" uid="uid://01b6swbpcotg" path="res://Assets/Buttons/Yellow Button.tres" id="1_cecmh"]
+[ext_resource type="StyleBox" uid="uid://bli12ty2jn322" path="res://Assets/Buttons/Red Button.tres" id="2_so52j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4o51"]
+bg_color = Color(0.941176, 0.941176, 0.941176, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7f6a"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.662745, 0.662745, 0.662745, 0.6)
+shadow_size = 2
+shadow_offset = Vector2(3, 3)
+
+[node name="MobileParentChildManagementScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.811765, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 40
+text = "Child Management"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4o51")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "My Children"
+
+[node name="Link Button" type="Button" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("1_cecmh")
+text = "Link Account"
+
+[node name="Child PanelContainer" type="PanelContainer" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h7f6a")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Child PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Child PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Child Profile HBoxContainer" type="HBoxContainer" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Child PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Child PanelContainer/MarginContainer/VBoxContainer/Child Profile HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Child PanelContainer/MarginContainer/VBoxContainer/Child Profile HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[Full Name]"
+
+[node name="Buttons HBoxContainer" type="HBoxContainer" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Child PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 2
+
+[node name="Buy Module Button" type="Button" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Child PanelContainer/MarginContainer/VBoxContainer/Buttons HBoxContainer"]
+custom_minimum_size = Vector2(110, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.982343, 0.982342, 0.982342, 1)
+theme_override_styles/normal = ExtResource("1_cecmh")
+text = "Buy Module"
+
+[node name="Unlink Account Button" type="Button" parent="Background ColorRect/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/Child PanelContainer/MarginContainer/VBoxContainer/Buttons HBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("2_so52j")
+text = "Unlink Account"

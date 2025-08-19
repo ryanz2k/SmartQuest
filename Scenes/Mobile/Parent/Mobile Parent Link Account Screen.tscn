@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwrdib2nk770u"]
+
+[ext_resource type="Texture2D" uid="uid://njpp6lbyq6or" path="res://Assets/Icons/Return Icon.svg" id="1_vv5gi"]
+[ext_resource type="StyleBox" uid="uid://dlwi030ng0e53" path="res://Assets/Buttons/White Button.tres" id="2_hxnjp"]
+[ext_resource type="Texture2D" uid="uid://baas3mh1pu2x0" path="res://icon.svg" id="3_yn0k8"]
+[ext_resource type="StyleBox" uid="uid://01b6swbpcotg" path="res://Assets/Buttons/Yellow Button.tres" id="4_o6hm8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tg1v"]
+bg_color = Color(0.941176, 0.941176, 0.941176, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[node name="MobileParentLinkAccountScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.811765, 0.137255, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Top MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Link Account"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Return Button" type="Button" parent="Background ColorRect/VBoxContainer/Top MarginContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+icon = ExtResource("1_vv5gi")
+flat = true
+alignment = 0
+
+[node name="Panel" type="Panel" parent="Background ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1tg1v")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Search Bar LineEdit" type="LineEdit" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Results"
+
+[node name="PanelContainer" type="PanelContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_hxnjp")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_yn0k8")
+
+[node name="Name Label" type="Label" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[Full Name]"
+
+[node name="Request Link Button" type="Button" parent="Background ColorRect/VBoxContainer/Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = ExtResource("4_o6hm8")
+text = "Request Link"
