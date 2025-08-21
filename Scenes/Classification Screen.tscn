@@ -1,0 +1,185 @@
+[gd_scene load_steps=10 format=3 uid="uid://cbp0gwn5iaav1"]
+
+[ext_resource type="Texture2D" uid="uid://ceyohhk2ier0u" path="res://SmartQuestbg.jpg" id="1_82oqk"]
+[ext_resource type="Texture2D" uid="uid://4lmrcvnkyfhf" path="res://user_icon.png" id="2_ov45y"]
+[ext_resource type="Script" uid="uid://dfiropikjj1xq" path="res://Scripts/classification.gd" id="3_ov45y"]
+
+[sub_resource type="SystemFont" id="SystemFont_mlwvx"]
+font_names = PackedStringArray("Agency FB")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmwcj"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+
+[sub_resource type="SystemFont" id="SystemFont_xpeq8"]
+font_names = PackedStringArray("Agency FB")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlwvx"]
+bg_color = Color(1, 0.811765, 0.137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="SystemFont" id="SystemFont_1baen"]
+font_names = PackedStringArray("Agency FB")
+
+[sub_resource type="SystemFont" id="SystemFont_a6huy"]
+font_names = PackedStringArray("Agency FB")
+
+[node name="ClassificationScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_ov45y")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_82oqk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_mlwvx")
+theme_override_font_sizes/font_size = 65
+text = "Classification"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(475, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nmwcj")
+
+[node name="Control2" type="Control" parent="VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Control" type="Control" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="PupilsBtn" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_xpeq8")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_mlwvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mlwvx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mlwvx")
+text = "PUPILS"
+icon = ExtResource("2_ov45y")
+
+[node name="Control3" type="Control" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="ParentsBtn" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_xpeq8")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_mlwvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mlwvx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mlwvx")
+text = "PARENT"
+icon = ExtResource("2_ov45y")
+
+[node name="Control4" type="Control" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="ModuleCreatorBtn" type="Button" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_xpeq8")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_mlwvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mlwvx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mlwvx")
+text = "MODULE CREATOR"
+icon = ExtResource("2_ov45y")
+
+[node name="Control2" type="Control" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_1baen")
+theme_override_font_sizes/font_size = 25
+text = "already have an"
+
+[node name="LoginLinkBtn" type="LinkButton" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.856382, 0.647239, 0.0325391, 1)
+theme_override_colors/font_focus_color = Color(0.854902, 0.647059, 0.0313726, 1)
+theme_override_colors/font_pressed_color = Color(0.854902, 0.647059, 0.0313726, 1)
+theme_override_colors/font_hover_color = Color(0.854902, 0.647059, 0.0313726, 1)
+theme_override_fonts/font = SubResource("SystemFont_a6huy")
+theme_override_font_sizes/font_size = 25
+text = "account?"
+underline = 2
+
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/PupilsBtn" to="." method="_on_pupils_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ParentsBtn" to="." method="_on_parents_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/ModuleCreatorBtn" to="." method="_on_module_creator_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LoginLinkBtn" to="." method="_on_login_link_btn_pressed"]

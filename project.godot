@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="SmartQuest"
-run/main_scene="uid://2r83y7ntr4hb"
+run/main_scene="uid://c07i2ctvt6ou"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+f9b94c20d195a1289aed39a9c214f5665c9bdfaeconfig/features=PackedStringArray("4.4", "Mobile")
 
 [autoload]
 
